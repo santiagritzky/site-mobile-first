@@ -2,6 +2,41 @@ hr{
     margin: 0;
 }
 .rodape{
-    background-color: var(--branco);
+    background-color: var(--cinza);
     padding: 1em;
 }
+.rodape ul{
+    display: none;
+}
+
+@media screen and (min-width:1024px){
+    
+    .rodape ul{
+        display: block;
+    }
+    .rodape{
+        display: flex;
+        padding: 4em 3em 4em 2em;
+        justify-content: space-between;
+    }
+    .rodape__titulo{
+        font-size: 24px;
+    }
+    .lista__titulo{
+        font-size: 14px;
+        margin-bottom: 2em;
+        text-transform: uppercase;
+        color: var(--cinza-escuro);
+    }
+    .lista__item-icon{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+
+    }
+    .lista__item-icon a{
+        color: var(--cinza-secundario);
+        margin-left: 0.5em;
+        text-decoration: none;
+    }
+}   
