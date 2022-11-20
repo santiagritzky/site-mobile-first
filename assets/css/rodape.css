@@ -40,3 +40,20 @@ hr{
         text-decoration: none;
     }
 }   
+
+@media screen and (min-width:1728px){
+
+    .rodape{
+        padding: 5em 3em 5em 2em;
+        justify-content: space-around;
+
+
+    }
+    .rodape ul{
+        border-left: 1px solid var(--cinza-escuro); 
+        padding-left: 1em;
+    }
+        
+
+
+}

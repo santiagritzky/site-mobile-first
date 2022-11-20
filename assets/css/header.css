@@ -18,21 +18,25 @@
         display: flex;
         align-items: center;
     }
-    .container #menu{
-        display: none;
-    }
+
     .container__img{
         padding: 1em;
     }
     .lista-menu{
         display: none;
         width: 60vw;
-    
+       position: absolute;
+        top: 100%;
     }
     .container__botao:checked ~.lista-menu{
         display: block;
-        position: absolute;
-        top: 100%;
+        
+    }
+    .container__botao:checked ~.container__label > .cabecalho__menu-amburguer{
+        background-image: url('../img/Menu\ Aberto.svg');
+    }
+    .container__botao:checked ~ .container__label{
+        background: var(--azul-degrade);
     }
     .lista-menu .lista-menu__titulo, .lista-menu__item{
         padding: 1em;
@@ -49,13 +53,21 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-transform: uppercase;
-    }   
+    }       
+    .container__botao{
+        display: none;
+    }
     .container__titulo{
         display: none;
     }
     .opcoes{
         display: none;
+    } 
+       .container__texto{
+        display: none;
+
     }
+    
     @media screen and (min-width:1024px){
         .cabecalho__menu-amburguer{
       display: none;
@@ -92,15 +104,26 @@
         .opcoes__input-checkbox:checked ~ .lista-menu{
             display: block;
             position: absolute;
-            top: 100%;
+            top: 100%;  
             width: auto;
         }
+        .opcoes__input-checkbox:checked ~ .opcoes__label > .opcoes__item{
+            background: var(--azul-degrade);
+            color: white;
+        }
+        .opcoes__item{
+            padding: 2em 1em;
+        }
+        .lista-menu__item:hover{
+            background: var(--azul-degrade);
+            color: var(--branco);
+        }
+        .lista-menu__item:hover>.lista-menu__link{
+            -webkit-text-fill-color: var(--branco);
+            text-decoration: none;
+        }
     }
-    .container__texto{
-        display: none;
 
-    }
-    
 @media screen and (min-width:1728px){
     .container__texto{
         display: block;

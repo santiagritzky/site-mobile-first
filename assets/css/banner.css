@@ -1,4 +1,5 @@
 .banner{
+    margin-top: 3em;
     background: var(--azul-degrade);
     color: var(--branco);
     text-align: center;
@@ -43,3 +44,15 @@ font-weight: 700;
         width: 50%;
     }
 }
+
+@media screen and (min-width:1728px){
+    .banner{
+        padding: 5em 0;
+    }
+  .banner__pesquisa{
+    width: 35%;
+  }
+  .banner__pesquisa::placeholder{
+    background-position: 6em;
+  }
+ }

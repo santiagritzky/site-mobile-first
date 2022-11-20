@@ -31,7 +31,8 @@ color: var(--azul);
     color: var(--azul);
     background-image: url('../img/email-icon.svg');
     background-repeat: no-repeat;
-    padding-left: 2em;
+    background-position: 2em;
+    padding-left: 4.5em;
 }
 @media screen and (min-width:1024px){
     .contato{
@@ -51,4 +52,16 @@ color: var(--azul);
     .contato__input{
         width: 30%;
     }
+}
+
+@media screen and (min-width:1728px){
+.contato{
+    padding: 3em 20vw;
+}
+.contato__descricao{
+    width: 40%;
+}
+.contato__texto{
+    width: 70%;
+}
 }
